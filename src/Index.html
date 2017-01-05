@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pixel Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="One-click PX/EM/%/PT conversion tables, a custom conversion calculator, gnd generated reset CSS.">
+    <script src="js/pxtoem.js"></script>
+
+</head>
+<body >
+
+<div id="op" class="op ">
+
+<!-- pxtoem -->
+
+    <div class="pages">
+        <div class="page" id="convert">
+            <div class="convert-base column">
+                <h2>Select your body font size</h2>
+                <h3>Conversions based on 16px browser default size</h3>
+                <div class="conversion-column">
+                    <table class="conversion-table base-table">
+                        <col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        <thead>
+                            <tr>
+                                <th>Pixels</th>
+                                <th>EMs</th>
+                                <th>Percent</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="convert-body column">
+                <h2>Your conversions</h2>
+                <h3>Conversions based on your body font size</h3>
+                <div class="conversion-column">
+                    <table class="conversion-table body-table">
+                        <col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        <thead>
+                            <tr>
+                                <th>Pixels</th>
+                                <th>EMs</th>
+                                <th>Percent</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="convert-custom column">
+                <h2>Custom conversion</h2>
+                <h3>Here&rsquo;s a calculator for your custom EM needs</h3>
+                <div class="conversion-column">
+                    <h4>1. Enter a base pixel size</h4>
+                    <div class="custom-base-size">
+                        <input type="text" class="custom-base"> px
+                    </div>
+                    <h4>2. Convert</h4>
+                    <div class="custom-wrap">
+                        <div class="custom-px-to-em">
+                            <h5>PX to EM</h5>
+                            <input type="text" class="custom-px"> px
+                        </div>
+                        <span class="or">or</span>
+                        <div class="custom-em-to-px">
+                            <h5>EM to PX</h5>
+                            <input type="text" class="custom-em"> em
+                        </div>
+                        <span class="convert-button">Convert</span>
+                    </div>
+                    <h4>3. Result</h4>
+                    <div class="custom-result"></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<script src="js/pxtoem.js" type="text/javascript"></script>
+<script src="common/sdkjs/util.js" type="text/javascript"></script>
+<script src="common/sdkjs/bs.js" type="text/javascript"></script>
+</body>
+</html>
