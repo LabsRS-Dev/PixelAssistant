@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>INSPINIA | Dashboard</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/px.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper" style="background-color:#94c72d">
+    <nav class="navbar-default navbar-static-side" role="navigation" style="background-color:#94c72d">
+        <div class="sidebar-collapse" style="background-color:#94c72d">
+            <ul class="nav metismenu"  id="side-menu"  style="background-color:#94c72d">
+                <li class="nav-header" style="background-color:#94c72d">
+                    <div class="dropdown profile-element" style="background-color:#94c72d"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg"  style="position:relative;left:53px" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" style="position:relative;left:30px;color:#fff;font-size:16px" >Pixel Assistant</strong>
+                             </span> </span> </a>
+                        <div class="container col-sm-8"><button class="form-control" style=" position:relative;left:25px;top:20px;font-size:12px;color:#fff;background-color:#94c72d;border-radius:10px" >Restore</button></div>
+                    </div>
+                    <div class="logo-element" style="background-color:#94c72d">
+                        IN+
+                    </div>
+                </li>
+
+                <li   style="background-color:#94c72d">
+                    <a href="index.html" style="background-color:#94c72d"><i style="font-size:20px;" class="fa fa-apple"></i> <span class="nav-label">Conversion</span> <span  class="fa arrow" style="position:absolute;left:200px;top:16px;font-size:16px"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a href="index.html">Conversion</a></li>
+                    </ul>
+                </li>
+                <li class="active" style="background-color:#94c72d">
+                    <a href="layouts.html" style="background-color:#94c72d"><i style="font-size:20px;"  class="fa fa-apple"></i> <span class="nav-label">Visualzation</span><span  class="fa arrow" style="position:absolute;left:200px;top:16px;font-size:16px"> </span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a href="layouts.html">PixelToSize</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg dashbard-1" style="background-color:#ececec;">
+        <div class=" border-bottom" style="text-align: center" >
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;text-align: center;
+            background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+              background-color: #ccc;line-height:60px">
+                <div class="navbar-header" >
+                    <a class="navbar-minimalize minimalize-styl-2   " ><i style="font-size:30px;color:#94c72d" class="fa fa-list">
+                    </i> </a>
+
+                </div>
+                <b style="color:#94c72d;font-size:18px;font-family: Georgia, 'Helvetica Neue', Arial, sans-serif;">Visualization-Display Devices</b>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content" style="margin-top:20px;padding:0px">
+            <div class="container-fluid">
+                <div class="col-sm-3">
+                    <select class="form-control" name="" id="s1">
+                        <option value="">Select brand</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control" name="" id="s2">
+                        <option value="">Select production</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control" name="" id="s3">
+                        <option value="">Select type</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control" name="" id="s4">
+                        <option value="">Selct resolution</option>
+                    </select>
+                </div>
+            </div>
+
+            <div  style="margin-top:20px;border-top:2px solid #cdcdcd;border-bottom:2px solid #cdcdcd;overflow: hidden">
+            <div id="no" class="col-md-9 cc"  ><canvas id="mycanvas"  width="785" height="398" style="display:block;background-color:#fff;"></canvas></div>
+            <div class="col-md-3"  style="display:block;padding-top: 50px;margin:0 auto">
+                <table class="table" id="table" style="text-align:center">
+                    <thead>
+                    <tr>
+                        <td >info</td>
+                        <td >value</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>inch</td>
+                        <td>21.5</td>
+                    </tr>
+                    <tr>
+                        <td>PPI</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>width(PX)</td>
+                        <td id="widt"></td>
+                    </tr>
+                    <tr>
+                        <td>height(PX)</td>
+                        <td id="heig"></td>
+                    </tr>
+                    <tr>
+                        <td>DDP</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Mainly scripts -->
+<script src="mac.json"></script>
+<script src="js/jquery.min.js" onload="(function(){ try{window.$ = window.jQuery = module.exports;}catch(e){}})();"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/inspinia.js"></script>
+<script src="js/jquery.ba-resize.min.js"></script>
+</body>
+</html>
